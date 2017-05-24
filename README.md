@@ -55,7 +55,7 @@ The script will encode the config file and write it to `newrelic-config.yaml`.
 Finally, submit the config to the cluster:
 
 ```console
-$ kubectl create -f examples/newrelic/newrelic-config.yaml
+$ oc create -f examples/newrelic/newrelic-config.yaml
 ```
 
 ### Step 2: Create service account and grant access to SCC
@@ -76,7 +76,7 @@ We need to label all nodes, where we want this to run. We did this via ansible. 
 
 ### Step 4: Create the DaemonSet definition.
 
-The DaemonSet definition instructs Kubernetes to place a newrelic sysmond agent on each Kubernetes node.
+The DaemonSet definition instructs Openshift to place a newrelic sysmond agent on each Openshift node.
 
 <!-- BEGIN MUNGE: EXAMPLE newrelic-daemonset.yaml -->
 
